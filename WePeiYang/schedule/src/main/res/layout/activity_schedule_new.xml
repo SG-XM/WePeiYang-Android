@@ -10,7 +10,7 @@
             name="viewModel"
             type="com.twtstudio.retrox.schedule.view.ScheduleNewViewModel" />
 
-        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
     </data>
 
     <FrameLayout
@@ -128,7 +128,7 @@
                         android:background="@color/white"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        bind:itemView="@{viewModel.itemView}"
+                        bind:itemBinding="@{viewModel.onItemBind}"
                         bind:items="@{viewModel.items}"
                         bind:layoutManager="@{LayoutManagers.linear()}"
                         bind:layout_behavior="com.twtstudio.retrox.schedule.behavior.RecyclerViewBehavior" />

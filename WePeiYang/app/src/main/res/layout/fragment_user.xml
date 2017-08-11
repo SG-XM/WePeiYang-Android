@@ -6,7 +6,7 @@
         <variable
             name="viewmodel"
             type="com.twt.service.home.user.UserFragViewModel"/>
-        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
 
         <import type="android.view.View" />
     </data>
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             bind:layoutManager="@{LayoutManagers.linear()}"
-            bind:itemView="@{viewmodel.itemView}"
+            bind:itemBinding="@{viewmodel.onItemBind}"
             bind:items="@{viewmodel.list}"
             bind:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 

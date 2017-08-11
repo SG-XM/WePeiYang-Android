@@ -14,6 +14,7 @@ import com.twtstudio.retrox.news.api.HomeNewsProvider;
 
 import me.tatarka.bindingcollectionadapter.ItemViewSelector;
 import me.tatarka.bindingcollectionadapter.itemviews.ItemViewClassSelector;
+import me.tatarka.bindingcollectionadapter2.OnItemBind;
 
 /**
  * Created by retrox on 26/02/2017.
@@ -28,7 +29,7 @@ public class NewsListViewModel implements ViewModel {
 
     public final ObservableArrayList<ViewModel> viewModels = new ObservableArrayList<>();
 
-    public final ItemViewSelector itemView = ItemViewClassSelector.builder()
+    public final OnItemBind onItemBind = ItemViewClassSelectorNew.builder()
             .put(NewsBannerViewModel.class, BR.viewModel, R.layout.item_home_news_banner)
             .put(NewsItemViewModel.class, BR.viewModel, R.layout.item_home_news)
             .build();

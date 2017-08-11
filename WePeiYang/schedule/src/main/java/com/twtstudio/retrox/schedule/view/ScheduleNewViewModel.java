@@ -23,6 +23,7 @@ import java.util.Objects;
 
 import me.tatarka.bindingcollectionadapter.ItemViewSelector;
 import me.tatarka.bindingcollectionadapter.itemviews.ItemViewClassSelector;
+import me.tatarka.bindingcollectionadapter2.ItemBinding;
 import me.tatarka.bindingcollectionadapter2.OnItemBind;
 
 /**
@@ -33,12 +34,24 @@ public class ScheduleNewViewModel {
     private RxAppCompatActivity rxActivity;
     public final ObservableArrayList<ViewModel> items = new ObservableArrayList<>();
 
-    public final OnItemBind<ViewModel> onItemBind
-    public final ItemViewSelector itemView = ItemViewClassSelector.builder()
-            .put(SelectedCoursesInfoViewModel.class, BR.viewModel, R.layout.item_selected_courses)
-            .put(SelectedDateInfoViewModel.class,BR.viewModel,R.layout.item_selected_date)
-            .put(CourseIsEmptyViewModel.class,BR.viewModel,R.layout.item_course_is_empty)
-            .build();
+    public final OnItemBind<ViewModel> onItemBind = new OnItemBind<ViewModel>() {
+        @Override
+        public void onItemBind(ItemBinding itemBinding, int position, ViewModel item) {
+            if (item instanceof SelectedCoursesInfoViewModel){
+                itemBinding.set(BR.viewModel, R.layout.item_selected_courses);
+            }else if (item instanceof SelectedDateInfoViewModel){
+                itemBinding.set(BR.viewModel,R.layout.item_selected_date);
+            }else if (item instanceof CourseIsEmptyViewModel){
+                itemBinding.set(BR.viewModel,R.layout.item_course_is_empty);
+            }
+        }
+    };
+
+//    public final ItemViewSelector itemView = ItemViewClassSelector.builder()
+//            .put(SelectedCoursesInfoViewModel.class, BR.viewModel, R.layout.item_selected_courses)
+//            .put(SelectedDateInfoViewModel.class,BR.viewModel,R.layout.item_selected_date)
+//            .put(CourseIsEmptyViewModel.class,BR.viewModel,R.layout.item_course_is_empty)
+//            .build();
     public final ObservableField<String> today = new ObservableField<>();
 
     public final ObservableField<String> date = new ObservableField<>();

@@ -8,7 +8,7 @@
             name="viewModel"
             type="com.twt.service.home.common.CommonFragViewModel" />
 
-        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
 
         <import type="android.view.View" />
 
@@ -90,7 +90,7 @@
             android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:itemView="@{viewModel.itemView}"
+            app:itemBinding="@{viewModel.onItemBind}"
             app:items="@{viewModel.viewModelList}"
             app:layoutManager="@{LayoutManagers.linear()}"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />

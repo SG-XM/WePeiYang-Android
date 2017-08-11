@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.jakewharton.butterknife'
 
 
@@ -53,6 +53,9 @@ dependencies {
     implementation project(':mvvmKit')
     implementation project(':commons')
     implementation project(':fragmentation')
+
+    implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.1.0'
+    implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.1.0'
 
 
     testCompile 'junit:junit:4.12'

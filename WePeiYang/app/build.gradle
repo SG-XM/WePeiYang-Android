@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'com.antfortune.freeline'
+//apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'com.antfortune.freeline'
 
 android {
     compileSdkVersion 25
@@ -104,6 +104,8 @@ dependencies {
     compile 'agency.tango.android:material-intro-screen:0.0.5'
     compile 'com.github.shem8:material-login:2.1.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.1.0'
+    implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.1.0'
 
 }
 

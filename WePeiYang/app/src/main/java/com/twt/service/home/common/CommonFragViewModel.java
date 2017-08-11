@@ -6,6 +6,7 @@ import android.preference.PreferenceManager;
 
 import com.kelin.mvvmlight.base.ViewModel;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
+import com.twt.service.support.ItemViewClassSelectorNew;
 import com.twt.wepeiyang.commons.utils.CommonPrefUtil;
 import com.twtstudio.retrox.bike.homeitem.BikeHomeItemViewModel;
 import com.twtstudio.retrox.classroomcore.home.ClassroomViewModel;
@@ -20,6 +21,8 @@ import com.twt.service.home.common.schedule.ScheduleViewModel;
 
 import me.tatarka.bindingcollectionadapter.ItemViewSelector;
 import me.tatarka.bindingcollectionadapter.itemviews.ItemViewClassSelector;
+import me.tatarka.bindingcollectionadapter2.ItemBinding;
+import me.tatarka.bindingcollectionadapter2.OnItemBind;
 
 /**
  * Created by retrox on 2017/1/16.
@@ -36,7 +39,7 @@ public class CommonFragViewModel implements ViewModel {
     private OneInfoViewModel mOneInfoViewModel;
     private GpaItemViewModel mGpaItemViewModel;
 
-    public final ItemViewSelector itemView = ItemViewClassSelector.builder()
+    public final OnItemBind onItemBind = ItemViewClassSelectorNew.builder()
 //            .put(OneDetailViewModel.class,BR.viewModel,R.layout.item_common_one)
             .put(GpaItemViewModel.class, BR.viewModel, R.layout.item_common_gpa)
             .put(ScheduleViewModel.class, BR.viewModel, R.layout.item_common_schedule)

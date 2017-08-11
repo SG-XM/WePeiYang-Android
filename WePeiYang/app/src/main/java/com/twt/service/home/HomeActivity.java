@@ -80,7 +80,7 @@ public class HomeActivity extends BaseActivity {
 
             mFragments[FIRST] = findFragment(CommonFragment.class);
             mFragments[SECOND] = findFragment(NewsFragment.class);
-            mFragments[THIRD] = findFragment(ToolsFragment.class);
+            mFragments[THIRD] = findFragment(ExploreFragment.class);
             mFragments[FOURTH] = findFragment(UserFragment.class);
 
         }

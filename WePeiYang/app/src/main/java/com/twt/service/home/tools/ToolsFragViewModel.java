@@ -17,6 +17,7 @@ import com.twt.service.R;
 import com.twtstudio.tjliqy.party.ui.home.PartyActivity;
 
 import me.tatarka.bindingcollectionadapter.ItemView;
+import me.tatarka.bindingcollectionadapter2.ItemBinding;
 
 
 /**
@@ -28,7 +29,7 @@ public class ToolsFragViewModel implements ViewModel {
 
     public final ObservableArrayList<ViewModel> itemList = new ObservableArrayList<>();
 
-    public final ItemView itemView = ItemView.of(BR.viewModel, R.layout.item_tool);
+    public final ItemBinding itemBinding = ItemBinding.of(BR.viewModel, R.layout.item_tool);
 
     public final ReplyCommand feedbackClick = new ReplyCommand(this::feedback);
 

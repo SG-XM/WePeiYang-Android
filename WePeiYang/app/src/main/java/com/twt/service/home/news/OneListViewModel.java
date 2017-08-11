@@ -9,6 +9,7 @@ import com.twt.service.BR;
 
 
 import me.tatarka.bindingcollectionadapter.ItemView;
+import me.tatarka.bindingcollectionadapter2.ItemBinding;
 
 /**
  * Created by retrox on 2017/2/11.
@@ -18,7 +19,7 @@ public class OneListViewModel implements ViewModel {
 
     public final ObservableArrayList<ViewModel> obDetailViewModelList = new ObservableArrayList<>();
 
-    public final ItemView itemView = ItemView.of(BR.viewModel, R.layout.item_common_one);
+    public final ItemBinding itemBinding = ItemBinding.of(BR.viewModel, R.layout.item_common_one);
 
     public OneListViewModel() {
         getData();

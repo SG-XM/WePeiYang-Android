@@ -10,6 +10,8 @@ import com.twt.service.base.BaseActivity;
 import me.tatarka.bindingcollectionadapter.BaseItemViewSelector;
 import me.tatarka.bindingcollectionadapter.ItemView;
 import me.tatarka.bindingcollectionadapter.ItemViewSelector;
+import me.tatarka.bindingcollectionadapter2.ItemBinding;
+import me.tatarka.bindingcollectionadapter2.OnItemBind;
 
 /**
  * Created by retrox on 2017/1/14.
@@ -21,22 +23,18 @@ public class UserFragViewModel implements ViewModel {
 
     public ObservableArrayList list = new ObservableArrayList();
 
-    public final ItemViewSelector<ViewModel> itemView = new BaseItemViewSelector<ViewModel>() {
+    public final OnItemBind<ViewModel> onItemBind = new OnItemBind<ViewModel>() {
         @Override
-        public void select(ItemView itemView, int position, ViewModel item) {
+        public void onItemBind(ItemBinding itemBinding, int position, ViewModel item) {
             if (position == 0) {
-                itemView.set(BR.viewModel, R.layout.item_user_avatar);
+                itemBinding.set(BR.viewModel, R.layout.item_user_avatar);
             } else if (1 <= position && position <= 3) {
-                itemView.set(BR.viewModel, R.layout.item_user_commons);
+                itemBinding.set(BR.viewModel, R.layout.item_user_commons);
             } else {
-                itemView.set(BR.viewModel, R.layout.item_user_settings);
+                itemBinding.set(BR.viewModel, R.layout.item_user_settings);
             }
         }
 
-        @Override
-        public int viewTypeCount() {
-            return 3;
-        }
     };
 
     public UserFragViewModel(BaseActivity activity) {
