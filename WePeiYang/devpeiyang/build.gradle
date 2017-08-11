@@ -42,11 +42,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
-    compile project(':news')
-//    compile project(':auth')
-//    compile project(':mvvmKit')
-    compile project(':commons')
-//    compile project(':bike')
+//    implementation project(':news')
+//    implementation project(':auth')
+//    implementation project(':mvvmKit')
+//    implementation project(':commons')
+//    implementation project(':bike')
 
 //    testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"

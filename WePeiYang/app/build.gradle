@@ -26,13 +26,7 @@ android {
             // but continue the build even when errors are found:
             abortOnError false
         }
-        productFlavors {
-            dev {
-                // Enable pre-dexing to produce an APK that can be tested on
-                // Android 5.0+ without the time-consuming DEX build processes.
-                minSdkVersion 21
-            }
-        }
+
 
     }
 
@@ -46,6 +40,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypeMatching 'staging', 'debug', 'release'
+
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
     }
@@ -59,22 +55,22 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //module
-    compile project(':mvvmKit')
-//    compile project(':navigationbottom')
-    compile project(':fragmentation')
-    compile project(':commons')
-    compile project(':gpa')
-    compile project(':bike')
-    compile project(':schedule')
-    compile project(':one')
-    compile project(':tjulibrary')
-    compile project(':classroomcore')
-    compile project(':news')
-    compile project(':auth')
-    compile project(':fellowsearch')
-    compile project(':yellowpages')
-    compile project(':party')
-    compile project(":classroomquery")
+    implementation project(':mvvmKit')
+//    implementation project(':navigationbottom')
+    implementation project(':fragmentation')
+    implementation project(':commons')
+    implementation project(':gpa')
+    implementation project(':bike')
+    implementation project(':schedule')
+    implementation project(':one')
+    implementation project(':tjulibrary')
+    implementation project(':classroomcore')
+    implementation project(':news')
+    implementation project(':auth')
+    implementation project(':fellowsearch')
+    implementation project(':yellowpages')
+    implementation project(':party')
+    implementation project(":classroomquery")
 
 //    compile 'com.twtstudio.retrox:commons:1.0.1'
 //    compile 'com.twtstudio.retrox:mvvmkit:1.0.0-SNAPSHOT'

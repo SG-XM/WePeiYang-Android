@@ -47,5 +47,5 @@ dependencies {
     compile 'com.sothree.slidinguppanel:library:3.3.0'
     compile 'com.getbase:floatingactionbutton:1.10.1'
 
-    compile project(':commons')
+    implementation project(':commons')
 }

@@ -42,7 +42,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile project(':commons')
+    implementation project(':commons')
+    implementation project(':mvvmKit')
+
+    implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.1.0'
+    implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.1.0'
     compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.haozhang.libary:android-slanted-textview:1.2'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'

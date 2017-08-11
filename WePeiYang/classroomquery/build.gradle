@@ -37,6 +37,6 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
 
 
-    compile project(':commons')
-//    compile project(':mvvmKit')
+    implementation project(':commons')
+    implementation project(':mvvmKit')
 }

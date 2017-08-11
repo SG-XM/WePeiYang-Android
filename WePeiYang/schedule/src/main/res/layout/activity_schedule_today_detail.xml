@@ -8,7 +8,7 @@
             name="viewModel"
             type="com.twtstudio.retrox.schedule.view.ScheduleTodayViewModel" />
 
-        <import type="me.tatarka.bindingcollectionadapter.LayoutManagers" />
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
     </data>
 
     <LinearLayout
@@ -20,7 +20,7 @@
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            bind:itemView="@{viewModel.itemView}"
+            bind:itemBinding="@{viewModel.onItemBind}"
             bind:items="@{viewModel.items}"
             bind:layoutManager="@{LayoutManagers.linear()}" />
     </LinearLayout>

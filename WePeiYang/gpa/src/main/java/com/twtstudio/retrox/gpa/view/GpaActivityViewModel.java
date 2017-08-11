@@ -61,9 +61,9 @@ public class GpaActivityViewModel implements ViewModel {
 
 //    public final ItemBinding itemBinding = ItemBinding.of();
 
-    public final OnItemBind<String> onItemBind = new OnItemBind<String>() {
+    public final OnItemBind<ViewModel> onItemBind = new OnItemBind<ViewModel>() {
         @Override
-        public void onItemBind(ItemBinding itemBinding, int position, String item) {
+        public void onItemBind(ItemBinding itemBinding, int position, ViewModel item) {
             if (mViewModels.get(position) instanceof GpaChartViewModel){
                 itemBinding.set(BR.viewModel,R.layout.gpa_item_chart);
             }else if (mViewModels.get(position) instanceof TermBriefViewModel){
