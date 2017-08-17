@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#00a1e9</color>
+    <color name="colorPrimaryDark">#00a1e9</color>
+    <color name="colorAccent">#00a1e9</color>
+    <!--辅助颜色，用于辅助按钮及标签颜色-->
+    <color name="assist_color_1">#0ac3d5</color>
+    <!--用于辅助按钮及标签颜色-->
+    <color name="assist_color_2">#ff4282</color>
+
+
     <color name="bike_background">#ebeff0</color>
     <color name="bike_crad_background">#fdfdfe</color>
     <color name="bike_toolbar_color">#27ad61</color>

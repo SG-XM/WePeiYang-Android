@@ -32,6 +32,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':commons')
-    implementation project(':mvvmKit')
+    compileOnly project(':commons')
+    compileOnly project(':mvvmKit')
 }

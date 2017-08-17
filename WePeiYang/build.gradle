@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         //2.2.3 ok 2.3.1 bug?
-        classpath 'com.android.tools.build:gradle:3.0.0-beta1'
+        classpath 'com.android.tools.build:gradle:3.0.0-beta2'
 //        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
 //        classpath 'com.antfortune.freeline:gradle:0.8.7'
@@ -34,4 +34,14 @@ allprojects {
 }
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+task cleanclear() {
+    dependsOn rootProject.getTasksByName("clean", true)
+    doLast {
+        //删除gradle缓存
+        "rm -rf ${gradle.gradleUserHomeDir}".execute()
+        //删除maven缓存
+        "rm -rf ${repositories.mavenLocal().getUrl().path}".execute()
+    }
 }

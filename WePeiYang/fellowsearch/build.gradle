@@ -30,10 +30,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
 
-    compile 'com.google.code.gson:gson:2.4'
-    compile'com.squareup.picasso:picasso:2.5.1'
-    compile'com.github.bumptech.glide:glide:3.5.2'
-    compile 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'com.squareup.picasso:picasso:2.5.1'
+    implementation 'com.github.bumptech.glide:glide:3.5.2'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.android.support:design:25.1.0'
 
-    implementation project(':commons')
+
+    compileOnly project(':commons')
 }
