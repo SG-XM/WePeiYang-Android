@@ -46,8 +46,8 @@ dependencies {
     implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.1.0'
     implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.1.0'
 
-    implementation (project(':commons'))
-    implementation (project(':mvvmKit'))
+    compileOnly project(':commons')
+    compileOnly project(':mvvmKit')
 //            {
 //        exclude group: 'me.tatarka.bindingcollectionadapter', module: 'bindingcollectionadapter'
 //    }
