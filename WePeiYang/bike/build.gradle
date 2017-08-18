@@ -67,7 +67,7 @@ dependencies {
     compile 'com.github.florent37:glidepalette:1.0.6'
     compile 'de.greenrobot:eventbus:2.4.0'
 
-    compileOnly project(':commons')
+    implementation project(':commons')
     compileOnly project(':mvvmKit')
 
     testCompile 'junit:junit:4.12'
