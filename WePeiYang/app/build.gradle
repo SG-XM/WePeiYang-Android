@@ -26,7 +26,15 @@ android {
             // but continue the build even when errors are found:
             abortOnError false
         }
-
+        flavorDimensions "api21"
+        productFlavors {
+            dev {
+                dimension "api21"
+                // Assigns this product flavor to the 'color' flavor dimension.
+                // This step is optional if you are using only one dimension.
+                minSdkVersion 21
+            }
+        }
 
     }
 

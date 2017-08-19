@@ -51,7 +51,7 @@ dependencies {
 
 
     compileOnly project(':mvvmKit')
-    compileOnly project(':commons')
+    implementation project(':commons')
     compileOnly project(':fragmentation')
 
     implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.1.0'
