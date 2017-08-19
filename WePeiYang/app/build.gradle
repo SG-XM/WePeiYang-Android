@@ -89,21 +89,21 @@ dependencies {
 //    compile 'com.twtstudio.retrox:classroomquery:1.0.0-SNAPSHOT'
 
 
-    compile 'com.wanjian:cockroach:0.0.5'
+    implementation 'com.wanjian:cockroach:0.0.5'
 
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
 
 //    compile 'us.feras.mdv:markdownview:1.1.0'
-    compile 'com.github.mukeshsolanki:MarkdownView-Android:1.0.3'
+    implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.3'
 
 
-    compile 'com.android.support:multidex:1.0.1'
-    compile 'agency.tango.android:material-intro-screen:0.0.5'
-    compile 'com.github.shem8:material-login:2.1.1'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:multidex:1.0.2'
+    implementation 'agency.tango.android:material-intro-screen:0.0.5'
+    implementation 'com.github.shem8:material-login:2.1.1'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.1.0'
     implementation 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.1.0'
 
